@@ -75,6 +75,10 @@ function blob_fixup() {
 	    [ "$2" = "" ] && return 0
             sed -i "s/\/odm\/bin\//\/vendor\/bin\//g" "${2}"
             ;;
+        system_ext/lib64/libwfdservice.so)
+            [ "$2" = "" ] && return 0
+            sed -i "s/android.media.audio.common.types-V2-cpp.so/android.media.audio.common.types-V3-cpp.so/" "${2}"
+            ;;
         vendor/lib64/vendor.libdpmframework.so)
 	    [ "$2" = "" ] && return 0
             "${PATCHELF_0_17_2}" --add-needed "libshim_hidlbase.so" "${2}"
