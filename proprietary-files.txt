@@ -1722,6 +1722,7 @@ vendor/etc/vintf/manifest/android.hardware.security.sharedsecret3-service.strong
 vendor/etc/vintf/manifest/android.hardware.weaver-service.nxp.xml
 vendor/etc/vintf/manifest/manifest_identity_credential.xml
 vendor/lib64/ese_weaver.so
+vendor/lib64/libcppbor_external.so
 vendor/lib64/libjc_keymint_nxp.so
 vendor/lib64/libjc_keymint_transport_nxp.so
 vendor/lib64/libqtiidentitycredential.so
