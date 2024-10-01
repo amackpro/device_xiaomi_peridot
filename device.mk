@@ -482,6 +482,7 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libshim_codec2 \
     libshim_hidlbase
 
 # Telephony

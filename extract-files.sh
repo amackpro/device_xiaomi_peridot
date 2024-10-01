@@ -83,6 +83,10 @@ function blob_fixup() {
 	    [ "$2" = "" ] && return 0
             "${PATCHELF_0_17_2}" --add-needed "libshim_hidlbase.so" "${2}"
             ;;
+        vendor/lib64/libqcodec2_core.so)
+	    [ "$2" = "" ] && return 0
+            grep -q "libshim_codec2.so" "${2}" || "${PATCHELF}" --add-needed "libshim_codec2.so" "${2}"
+            ;;
         *)
             return 1
             ;;
