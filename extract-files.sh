@@ -83,8 +83,8 @@ function blob_fixup() {
 	    [ "$2" = "" ] && return 0
             "${PATCHELF_0_17_2}" --add-needed "libshim_hidlbase.so" "${2}"
             ;;
-        vendor/etc/seccomp_policy/atfwd@2.0.policy|vendor/etc/seccomp_policy/wfdhdcphalservice.policy)
-        [ "$2" = "" ] && return 0
+        vendor/etc/seccomp_policy/atfwd@2.0.policy|vendor/etc/seccomp_policy/wfdhdcphalservice.policy|vendor/etc/seccomp_policy/qsap_sensors.policy|vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy)
+            [ "$2" = "" ] && return 0
             grep -q "gettid: 1" "${2}" || echo -e "\ngettid: 1" >> "${2}"
             ;;
         vendor/lib64/libqcodec2_core.so)
